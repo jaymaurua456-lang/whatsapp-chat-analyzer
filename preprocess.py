@@ -26,7 +26,7 @@ def preprocess(data):
     df['message'] = messages
     df.drop(columns=['user_message'], inplace=True)
     
-    # Date-time features extraction matrix
+    # Date-time features extraction matrix (With month_num included)
     df['message_date'] = pd.to_datetime(df['message_date'], format='%d/%m/%Y, %H:%M', errors='coerce')
     df['year'] = df['message_date'].dt.year
     df['month'] = df['message_date'].dt.month_name()
