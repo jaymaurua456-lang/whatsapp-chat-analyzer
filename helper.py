@@ -6,13 +6,11 @@ import emoji
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 
-# NLTK data ensure karne ke liye code snippet
 try:
     nltk.data.find('sentiment/vader_lexicon.zip')
 except LookupError:
     nltk.download('vader_lexicon')
 
-# Custom Hinglish & English Stop Words array data cleaning ke liye
 STOP_WORDS = [
     "hai","ki","ka","ke","ko","se","aur","to","me","mai","main","is","the","a","an","of","for",
     "in","on","at","ho","ha","h","ya","na","bhai", "and", "bhi", "you", "hi", "i", "<media", 
