@@ -1,3 +1,6 @@
+import os
+os.system("pip install wordcloud emoji seaborn nltk")
+
 import streamlit as st
 import preprocess
 import helper
